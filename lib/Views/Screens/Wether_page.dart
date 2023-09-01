@@ -295,7 +295,7 @@ class _homeState extends State<home> {
                     padding: EdgeInsets.only(top: 195.0, left: 195),
                     child: Text(
                       "℃",
-                      style: TextStyle(color: Colors.black, fontSize: 35),
+                      style: TextStyle(color: Colors.white, fontSize: 35),
                     ),
                   ),
                 ],
