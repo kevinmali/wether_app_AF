@@ -39,6 +39,8 @@ dependencies:
   animated_text_kit: ^4.2.2
   searchbar_animation: ^0.0.4
   provider: ^6.0.5
+  shared_preferences:
+  introduction_screen:
 
 dev_dependencies:
   flutter_test:
