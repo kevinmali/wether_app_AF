@@ -43,7 +43,7 @@ class _homeState extends State<home> {
                                       .isdark ==
                                   true)
                               ? 'https://e0.pxfuel.com/wallpapers/22/797/desktop-wallpaper-iphone-fantasy-cloudy-weather.jpg'
-                              : 'https://iphoneswallpapers.com/wp-content/uploads/2019/06/River-iPhone-Wallpaper-469x832.jpg'),
+                              : 'https://c4.wallpaperflare.com/wallpaper/380/968/943/stormy-4k-8k-hd-wallpaper-preview.jpg'),
                           fit: BoxFit.fill),
                     ),
                     child: Column(
@@ -71,21 +71,25 @@ class _homeState extends State<home> {
                             child: Container(
                               width: 150,
                               child: TextFormField(
+                                cursorColor: Colors.white,
                                 style: const TextStyle(
-                                    fontSize: 25, fontWeight: FontWeight.bold),
+                                    color: Colors.white,
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold),
                                 decoration: InputDecoration(
                                   prefixIcon: const Icon(
                                     Icons.location_on,
                                     color: Colors.white,
                                   ),
                                   border: InputBorder.none,
-                                  hintText: "${searchString}",
+                                  // hintText: "${searchString}",
                                   hintStyle: TextStyle(color: Colors.white),
                                 ),
                                 onFieldSubmitted: (val) {
                                   setState(() {
                                     searchString = val;
                                   });
+                                  search_Controller.clear();
                                 },
                               ),
                             ),
