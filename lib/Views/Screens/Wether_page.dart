@@ -38,15 +38,23 @@ class _homeState extends State<home> {
                     width: MediaQuery.of(context).size.width / 1,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage((Provider.of<themeprovider>(
-                                          context,
-                                          listen: true)
-                                      .theme
-                                      .isdark ==
-                                  true)
-                              ? 'https://e0.pxfuel.com/wallpapers/22/797/desktop-wallpaper-iphone-fantasy-cloudy-weather.jpg'
-                              : 'https://w0.peakpx.com/wallpaper/754/767/HD-wallpaper-blue-moon-full-moon-nature-sky-thumbnail.jpg'),
-                          fit: BoxFit.cover),
+                          image: AssetImage(
+                              (Provider.of<themeprovider>(context, listen: true)
+                                          .theme
+                                          .isdark ==
+                                      true)
+                                  ? "Asset/Images/load.jpg"
+                                  : "Asset/Images/home_page_night.jpeg"),
+                          fit: BoxFit.fill
+                          // NetworkImage((Provider.of<themeprovider>(
+                          //                 context,
+                          //                 listen: true)
+                          //             .theme
+                          //             .isdark ==
+                          //         true)
+                          //     ? 'https://e0.pxfuel.com/wallpapers/22/797/load.jpg'
+                          //     : 'https://w0.peakpx.com/wallpaper/754/767/HD-wallpaper-blue-moon-full-moon-nature-sky-thumbnail.jpg'),
+                          ),
                     ),
                     child: Column(
                       children: [
@@ -58,7 +66,7 @@ class _homeState extends State<home> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Text(
-                              'Today,  ${apimodel!.location['localtime']}',
+                              'Today ,  ${apimodel!.location['localtime']}',
                               style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
@@ -79,7 +87,14 @@ class _homeState extends State<home> {
                             child: Container(
                               width: 150,
                               child: TextFormField(
-                                cursorColor: Colors.white,
+                                cursorColor: (Provider.of<themeprovider>(
+                                                context,
+                                                listen: true)
+                                            .theme
+                                            .isdark ==
+                                        true)
+                                    ? wcolor
+                                    : bcolor,
                                 style: TextStyle(
                                     color: (Provider.of<themeprovider>(context,
                                                     listen: true)
@@ -246,6 +261,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.forecast["forecastday"][0]['hour'][0]['temp_c']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -253,7 +279,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.bloodtype),
+                                          Icon(
+                                            Icons.bloodtype,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -276,6 +312,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.current['humidity']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -283,7 +330,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.accessibility),
+                                          Icon(
+                                            Icons.accessibility,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -306,6 +363,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.current['feelslike_c']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -313,7 +381,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.sunny),
+                                          Icon(
+                                            Icons.sunny,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -336,6 +414,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.current['uv']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -352,7 +441,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.sunny),
+                                          Icon(
+                                            Icons.sunny,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -375,6 +474,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.current['temp_c']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -382,7 +492,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.sunny_snowing),
+                                          Icon(
+                                            Icons.sunny_snowing,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -405,6 +525,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.forecast["forecastday"][0]['hour'][0]['temp_c']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -412,7 +543,17 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.shield_moon),
+                                          Icon(
+                                            Icons.shield_moon,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -435,6 +576,17 @@ class _homeState extends State<home> {
                                           ),
                                           Text(
                                             "${apimodel?.forecast["forecastday"][0]['hour'][1]['temp_c']}",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
                                           )
                                         ],
                                       ),
@@ -449,7 +601,7 @@ class _homeState extends State<home> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 195.0, left: 195),
+                    padding: EdgeInsets.only(top: 195.0, left: 194),
                     child: Text(
                       "℃",
                       style: TextStyle(
@@ -473,7 +625,7 @@ class _homeState extends State<home> {
               width: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("Asset/Images/backwethwer.jpg"),
+                  image: AssetImage("Asset/Images/load.jpg"),
                 ),
               ),
             ),
