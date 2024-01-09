@@ -13,6 +13,8 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+  Color bcolor = Colors.white;
+  Color wcolor = Colors.black;
   bool today = true;
   bool tomorrow = false;
   TextEditingController search_Controller = TextEditingController();
@@ -43,8 +45,8 @@ class _homeState extends State<home> {
                                       .isdark ==
                                   true)
                               ? 'https://e0.pxfuel.com/wallpapers/22/797/desktop-wallpaper-iphone-fantasy-cloudy-weather.jpg'
-                              : 'https://c4.wallpaperflare.com/wallpaper/380/968/943/stormy-4k-8k-hd-wallpaper-preview.jpg'),
-                          fit: BoxFit.fill),
+                              : 'https://w0.peakpx.com/wallpaper/754/767/HD-wallpaper-blue-moon-full-moon-nature-sky-thumbnail.jpg'),
+                          fit: BoxFit.cover),
                     ),
                     child: Column(
                       children: [
@@ -57,10 +59,16 @@ class _homeState extends State<home> {
                             alignment: Alignment.topLeft,
                             child: Text(
                               'Today,  ${apimodel!.location['localtime']}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                                  color: (Provider.of<themeprovider>(context,
+                                                  listen: true)
+                                              .theme
+                                              .isdark ==
+                                          true)
+                                      ? wcolor
+                                      : bcolor),
                             ),
                           ),
                         ),
@@ -72,18 +80,38 @@ class _homeState extends State<home> {
                               width: 150,
                               child: TextFormField(
                                 cursorColor: Colors.white,
-                                style: const TextStyle(
-                                    color: Colors.white,
+                                style: TextStyle(
+                                    color: (Provider.of<themeprovider>(context,
+                                                    listen: true)
+                                                .theme
+                                                .isdark ==
+                                            true)
+                                        ? wcolor
+                                        : bcolor,
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold),
                                 decoration: InputDecoration(
-                                  prefixIcon: const Icon(
+                                  prefixIcon: Icon(
                                     Icons.location_on,
-                                    color: Colors.white,
+                                    color: (Provider.of<themeprovider>(context,
+                                                    listen: true)
+                                                .theme
+                                                .isdark ==
+                                            true)
+                                        ? wcolor
+                                        : bcolor,
                                   ),
                                   border: InputBorder.none,
                                   // hintText: "${searchString}",
-                                  hintStyle: TextStyle(color: Colors.white),
+                                  hintStyle: TextStyle(
+                                      color: (Provider.of<themeprovider>(
+                                                      context,
+                                                      listen: true)
+                                                  .theme
+                                                  .isdark ==
+                                              true)
+                                          ? wcolor
+                                          : bcolor),
                                 ),
                                 onFieldSubmitted: (val) {
                                   setState(() {
@@ -104,10 +132,16 @@ class _homeState extends State<home> {
                             padding: const EdgeInsets.only(left: 28.0),
                             child: Text(
                               "${apimodel.current['temp_c']}",
-                              style: const TextStyle(
+                              style: TextStyle(
                                   fontSize: 80,
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white),
+                                  color: (Provider.of<themeprovider>(context,
+                                                  listen: true)
+                                              .theme
+                                              .isdark ==
+                                          true)
+                                      ? wcolor
+                                      : bcolor),
                             ),
                           ),
                         ),
@@ -123,7 +157,13 @@ class _homeState extends State<home> {
                                 },
                                 icon: Icon(
                                   Icons.wb_sunny_outlined,
-                                  color: Colors.white,
+                                  color: (Provider.of<themeprovider>(context,
+                                                  listen: true)
+                                              .theme
+                                              .isdark ==
+                                          true)
+                                      ? wcolor
+                                      : bcolor,
                                 ),
                               ),
                               SizedBox(
@@ -134,7 +174,13 @@ class _homeState extends State<home> {
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                    color: (Provider.of<themeprovider>(context,
+                                                    listen: true)
+                                                .theme
+                                                .isdark ==
+                                            true)
+                                        ? wcolor
+                                        : bcolor),
                               )
                             ],
                           ),
@@ -146,7 +192,13 @@ class _homeState extends State<home> {
                             height: 220,
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Colors.white30,
+                              color: (Provider.of<themeprovider>(context,
+                                              listen: true)
+                                          .theme
+                                          .isdark ==
+                                      true)
+                                  ? Colors.white.withOpacity(0.3)
+                                  : Colors.black.withOpacity(0.3),
                               borderRadius: BorderRadius.circular(20),
                             ),
                             child: Column(
@@ -161,11 +213,34 @@ class _homeState extends State<home> {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: [
-                                          const Icon(Icons.air),
+                                          Icon(
+                                            Icons.air,
+                                            color: (Provider.of<themeprovider>(
+                                                            context,
+                                                            listen: true)
+                                                        .theme
+                                                        .isdark ==
+                                                    true)
+                                                ? wcolor
+                                                : bcolor,
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Wind"),
+                                          Text(
+                                            "Wind",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -182,7 +257,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Humidity"),
+                                          Text(
+                                            "Humidity",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -199,7 +287,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Feels Like"),
+                                          Text(
+                                            "Feels Like",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -216,7 +317,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("UV Index"),
+                                          Text(
+                                            "UV Index",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -242,7 +356,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Day"),
+                                          Text(
+                                            "Day",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -259,7 +386,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Evening"),
+                                          Text(
+                                            "Evening",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -276,7 +416,20 @@ class _homeState extends State<home> {
                                           const SizedBox(
                                             height: 5,
                                           ),
-                                          const Text("Night"),
+                                          Text(
+                                            "Night",
+                                            style: TextStyle(
+                                                color:
+                                                    (Provider.of<themeprovider>(
+                                                                    context,
+                                                                    listen:
+                                                                        true)
+                                                                .theme
+                                                                .isdark ==
+                                                            true)
+                                                        ? wcolor
+                                                        : bcolor),
+                                          ),
                                           const SizedBox(
                                             height: 5,
                                           ),
@@ -295,11 +448,19 @@ class _homeState extends State<home> {
                       ],
                     ),
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.only(top: 195.0, left: 195),
                     child: Text(
                       "℃",
-                      style: TextStyle(color: Colors.white, fontSize: 35),
+                      style: TextStyle(
+                          color:
+                              (Provider.of<themeprovider>(context, listen: true)
+                                          .theme
+                                          .isdark ==
+                                      true)
+                                  ? wcolor
+                                  : bcolor,
+                          fontSize: 35),
                     ),
                   ),
                 ],

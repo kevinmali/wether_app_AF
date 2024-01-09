@@ -3,14 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class intro_page extends StatefulWidget {
-  const intro_page({super.key});
+class intro_page extends StatelessWidget {
+  intro_page({super.key});
 
-  @override
-  State<intro_page> createState() => _intro_pageState();
-}
-
-class _intro_pageState extends State<intro_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
