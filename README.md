@@ -67,13 +67,14 @@ Project Evaluation:
 - Quality of code and project structure
 - Presentation quality and clarity of communication
 
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/b1f2081b-2cdb-4a21-889f-ab1af8872cc7" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/664f9721-54b2-4624-b72d-21978bbedeee" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/cf01f3e7-eb14-4926-8a2e-3f1dc1530143" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/f3612fb4-e741-4f51-913f-b967bad855b5" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/84678bfa-5622-4d56-851d-4cbde27566ee" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/573e656f-e818-4b7d-a8ab-e6db18dda996" width = "250px" >
-<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/f3e7a479-ed72-42fe-9e89-a1f58ed1bdf3" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/6410690d-da11-4c20-9282-7e253f9bdb3a" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/4d1b13c4-0ad4-48bb-92db-89780c35749b" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/82a6affc-386b-45c0-8f07-66aa83fbe947" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/da616275-15b0-4be6-9453-1eb6d22ff214" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/186ce524-af31-4908-beb0-2f32fb96b7ff" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/b03c2195-70e1-4bbf-90e2-e5be1da480a6" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/07e36402-28ea-414e-8d48-316028d7d773" width = "250px" >
+<img src = "https://github.com/kevinmali/wether_app_AF/assets/132121875/367a010b-4c16-4b72-aec2-2daec428e9c6" width = "250px" >
 
 
 
