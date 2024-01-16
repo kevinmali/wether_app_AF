@@ -27,8 +27,8 @@ class _SplashState extends State<Splash> {
               height: MediaQuery.of(context).size.height / 1,
               width: 420,
               child: Image.asset(
-                "Asset/Images/home_page_night.jpeg",
-                fit: BoxFit.fill,
+                "Asset/Images/splash.webp",
+                fit: BoxFit.cover,
               ),
             ),
           ],
